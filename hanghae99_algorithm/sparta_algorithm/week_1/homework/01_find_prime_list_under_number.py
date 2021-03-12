@@ -37,23 +37,23 @@ input = 20
 # 주어진 자연수 N이 소수이기 위한 필요 충분 조건은
 # N이 N의 제곱근보다 크지 않은 어떤 소수로도 나눠지지 않는다.
 # 수가 수를 나누면 몫이 발생하는데, 몫과 나누는 수 둘 중 하나는 반드시 N 제곱근 이하
-# def find_prime_list_under_number(number):
-#     prime_list = []
-#     for n in range(2, number + 1):  # n = 2 ~ 20
-#         # print("n: ", n)
-#         for i in range(2, n):       # i = 2, n = 2,3    / n자기 자신을 자기 보다 더 작은 수들로 나누겠다.
-#             print("프린트가 나오면 n이 2인데, 포문 안에 들어온 것.")
-#             if n % i == 0:
-#                 # print("i: ", i)
-#                 # print("n%i: ", n%i)
-#                 break
-#         else:
-#             prime_list.append(n)
-#
-#     return prime_list
-#
-# result = find_prime_list_under_number(input)
-# print(result)
+def find_prime_list_under_number(number):
+    prime_list = []
+    for n in range(2, number + 1):  # n = 2 ~ 20
+        # print("n: ", n)
+        for i in range(2, n):       # i = 2, n = 2,3    / n자기 자신을 자기 보다 더 작은 수들로 나누겠다.
+            print("프린트가 나오면 n이 2인데, 포문 안에 들어온 것.")
+            if n % i == 0:
+                # print("i: ", i)
+                # print("n%i: ", n%i)
+                break
+        else:
+            prime_list.append(n)
+
+    return prime_list
+
+result = find_prime_list_under_number(input)
+print(result)
 
 # 헤맸던 부분: 41번째 줄  for i in range(2, n):
 # 조건이 n이 2라면? for i in range(2, 2): 가 되니까 n=2일 때는 for문 안에 아예 들어가지도 못한다!!!
