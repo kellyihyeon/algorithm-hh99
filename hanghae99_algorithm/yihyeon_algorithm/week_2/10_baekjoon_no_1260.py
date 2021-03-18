@@ -11,7 +11,7 @@ for _ in range(m):
     x, y = map(int, input().split())
     tool[x][y] = tool[y][x] = 1
 
-# need: stack=[], visited_node=[]
+# requirement: stack=[], visited_node=[]
 def dfs(s_node, visited_node):
     # visited_node = []       # visited_node = [3,1,2,5,4 ]
     stack = [s_node]          # stack = []
